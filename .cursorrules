@@ -1,0 +1,32 @@
+# Rules for LoanDepot React Project
+
+## 1. Development Scope & AI Role
+
+- **Developer Role (Full Logic & Architecture Responsibility)**:
+  - You own 100% of the application architecture, component prop contracts, custom hooks, State/Redux Toolkit Query integration, React Hook Form, and event handlers.
+- **Cursor Agent Role (Static UI/Layout Generator)**:
+  - Generate ONLY static JSX structures and Tailwind CSS v4 styling based on Figma screenshots and tasks.
+  - DO NOT write component props, event handlers, useState/useReducer hooks, or API fetching logic.
+  - Output raw, hardcoded static markup so the developer can independently refactor it into clean, parametrised components.
+
+## 2. Design System & Color Palette
+
+- **ALLOWED COLORS ONLY**: You MUST ONLY use the custom Tailwind brand colors defined in `@theme` inside `src/index.css`. NEVER use default Tailwind color numbers or raw HEX values:
+  - `bg-brand-purple-dark`, `text-brand-purple-dark` (#301A37)
+  - `bg-brand-purple`, `text-brand-purple`, `border-brand-purple` (#6D53AF)
+  - `bg-brand-green`, `text-brand-green`, `border-brand-green` (#9EC73D)
+  - `bg-brand-green-alt` (#A9CA5B)
+  - `bg-brand-gray`, `text-brand-gray`, `border-brand-gray` (#979797)
+  - `bg-brand-gray-light`, `border-brand-gray-light` (#E2E2E2)
+  - `bg-brand-light`, `text-brand-light` (#FAFAFA)
+  - Standard pure black/white (`bg-black`, `text-white`) when explicitly needed.
+
+## 3. Project Documentation & Specifications
+
+- Primary requirements and section breakdowns reside in `docs/Task.md`.
+- Component hierarchy and layout boundaries are documented in `docs/architecture.md`.
+
+## 4. Code Quality & Standards
+
+- Mobile-first responsive layout (desktop sections set to `h-screen` / `100vh`).
+- All generated code must pass Oxlint without warnings or syntax issues.

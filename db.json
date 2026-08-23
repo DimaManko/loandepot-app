@@ -1,0 +1,17 @@
+{
+  "modules": [
+    {
+      "id": "1",
+      "title": "Module 1",
+      "description": "Description for module 1",
+      "status": "available"
+    },
+    {
+      "id": "2",
+      "title": "Module 2",
+      "description": "Description for module 2",
+      "status": "locked"
+    }
+  ],
+  "requests": []
+}
