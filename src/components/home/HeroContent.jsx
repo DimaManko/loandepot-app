@@ -10,8 +10,6 @@ export function HeroContent() {
         <p className="mt-6 max-w-sm text-sm font-semibold leading-relaxed text-brand-gray">
           A retail LO's guide to combating digital disruption
         </p>
-
-        {/* Убрали mb-[94px] */}
         <div>
           <button
             type="button"
