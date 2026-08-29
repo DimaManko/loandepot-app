@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev:vite": "vite",
-    "dev:backend": "YOUR_BACKEND_COMMAND",
+    "dev:backend": "json-server db.json",
     "dev": "concurrently -n \"vite,backend\" -c \"cyan,magenta\" -k \"npm run dev:vite\" \"npm run dev:backend\"",
     "build": "vite build",
     "lint": "oxlint",
