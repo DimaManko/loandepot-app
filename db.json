@@ -1,17 +1,83 @@
 {
+  "heroSection": {
+    "content": {
+      "title": "Show Up: Evolve",
+      "subtitle": "A retail LO's guide to combating digital disruption",
+      "ctaText": "Get free access",
+      "ctaLink": "#get-access",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    },
+    "exploreControl": {
+      "title": "Explore 8 Educational Modules To Evolve Your Career",
+      "totalCount": 8,
+      "actionText": "EXPLORE ALL MODULES",
+      "link": "/modules"
+    }
+  },
   "modules": [
     {
-      "id": "1",
-      "title": "Module 1",
-      "description": "Description for module 1",
-      "status": "available"
+      "id": "module-1",
+      "number": "01",
+      "title": "Name of the 1st module here",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
+      "link": "/modules/1"
     },
     {
-      "id": "2",
-      "title": "Module 2",
-      "description": "Description for module 2",
-      "status": "locked"
+      "id": "module-2",
+      "number": "02",
+      "title": "Name of the 2nd module here",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "imageUrl": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
+      "link": "/modules/2"
+    },
+    {
+      "id": "module-3",
+      "number": "03",
+      "title": "Name of the 3rd module here",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "imageUrl": "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80",
+      "link": "/modules/3"
+    },
+    {
+      "id": "module-4",
+      "number": "04",
+      "title": "Name of the 4th module here",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "imageUrl": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80",
+      "link": "/modules/4"
+    },
+    {
+      "id": "module-5",
+      "number": "05",
+      "title": "Name of the 5th module here",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "imageUrl": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
+      "link": "/modules/5"
+    },
+    {
+      "id": "module-6",
+      "number": "06",
+      "title": "Name of the 6th module here",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "imageUrl": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
+      "link": "/modules/6"
+    },
+    {
+      "id": "module-7",
+      "number": "07",
+      "title": "Name of the 7th module here",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80",
+      "link": "/modules/7"
+    },
+    {
+      "id": "module-8",
+      "number": "08",
+      "title": "Name of the 8th module here",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "imageUrl": "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&q=80",
+      "link": "/modules/8"
     }
-  ],
-  "requests": []
+  ]
 }
