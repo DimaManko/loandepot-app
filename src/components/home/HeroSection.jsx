@@ -4,6 +4,7 @@ import { HeroContent } from "./HeroContent";
 import { HeroSlider } from "./HeroSlider";
 import Loader from "../ui/Loader";
 import ErrorMessage from "../ui/ErrorMessage";
+import VideoModal from "../ui/VideoModal";
 
 import { useGetDataHeroSectionQuery } from "../../store/services/api";
 import { useState } from "react";
@@ -38,10 +39,18 @@ export function HeroSection() {
         {/* Контентная область */}
         <div className="relative flex flex-1 flex-col overflow-hidden">
           {/* Сетка Hero */}
-          <HeroContent {...content} />
+          <HeroContent
+            {...content}
+            onOpenVideoModal={() => setIsOpenVideo(true)}
+          />
 
           {/* Блок со слайдами (Slider Section) - min-height 307px, 104px margin right */}
           <HeroSlider />
+          <VideoModal
+            onCloseVideoModal={() => setIsOpenVideo(false)}
+            isOpen={isOpenVideo}
+            videoLink={content.videoUrl}
+          />
         </div>
       </div>
     </section>

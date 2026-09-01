@@ -1,4 +1,4 @@
-export function HeroContent() {
+export function HeroContent({ subtitle, ctaText, onOpenVideoModal }) {
   return (
     <div className="grid flex-1 grid-cols-1 lg:grid-cols-[1fr_1.1fr]">
       {/* Левая часть: Текст */}
@@ -8,14 +8,14 @@ export function HeroContent() {
           Show Up: <span className="text-brand-purple">Evolve</span>
         </h1>
         <p className="mt-6 max-w-sm text-sm font-semibold leading-relaxed text-brand-gray">
-          A retail LO's guide to combating digital disruption
+          {subtitle}
         </p>
         <div>
           <button
             type="button"
             className="mt-10 w-fit rounded-[2px] bg-brand-purple px-10 py-4 text-[10px] font-bold tracking-[0.2em] text-white uppercase transition-all hover:bg-brand-purple-dark"
           >
-            Get free access
+            {ctaText}
           </button>
         </div>
       </div>
@@ -29,21 +29,27 @@ export function HeroContent() {
             className="absolute inset-0 size-full object-cover"
           />
           <div className="absolute inset-0 flex items-center justify-center gap-4 bg-black/5">
-            <button
-              type="button"
-              className="flex size-16 items-center justify-center rounded-full bg-white shadow-2xl transition-transform hover:scale-105"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                className="ml-1 size-7 text-brand-purple"
-                fill="currentColor"
+            {/* mb-[307px] — смещаем кнопку вверх на высоту слайдера (HeroSlider),
+                чтобы она центрировалась между шапкой и секцией со слайдером.
+                Картинка и оверлей при этом не изменяются. */}
+            <div className="mb-[307px] flex items-center gap-4">
+              <button
+                onClick={onOpenVideoModal}
+                type="button"
+                className="flex size-16 items-center justify-center rounded-full bg-white shadow-2xl transition-transform hover:scale-105"
               >
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </button>
-            <span className="text-sm font-black tracking-[0.4em] text-white uppercase drop-shadow-md">
-              WHY
-            </span>
+                <svg
+                  viewBox="0 0 24 24"
+                  className="ml-1 size-7 text-brand-purple"
+                  fill="currentColor"
+                >
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </button>
+              <span className="text-sm font-black tracking-[0.4em] text-white uppercase drop-shadow-md">
+                WHY
+              </span>
+            </div>
           </div>
         </div>
       </div>
