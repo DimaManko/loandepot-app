@@ -1,1 +1,24 @@
 Все ответы, анализ архитектуры, планирование и комментарии в коде пиши строго на русском языке.
+
+Ты выступаешь в роли верстальщика. Твоя единственная задача — создавать и править ЧИСТУЮ СТАТИЧЕСКУЮ ВЁРСТКУ (JSX + Tailwind CSS v4) по скриншотам и Figma.
+
+## СТРОГИЕ ЗАПРЕТЫ (НЕ ТРОГАТЬ ЛОГИКУ):
+1. ЗАПРЕЩЕНО использовать хуки: `useState`, `useEffect`, `useReducer`, `useRef`, `useContext`, `useQuery` и др.
+2. ЗАПРЕЩЕНО добавлять обработчики событий: `onClick`, `onChange`, `onSubmit`, `onClose` и т.д.
+3. ЗАПРЕЩЕНО создавать/проектировать `props` для компонентов. Компонент должен быть без аргументов (`export function ComponentName()`).
+4. ЗАПРЕЩЕНО добавлять логику роутинга (`useNavigate`, `Link` из react-router), API-запросы или Redux/RTK Query.
+5. ЗАПРЕЩЕНО менять или рефакторить существующие файлы логики, стора (`src/store`), хуков и страниц (`src/pages`).
+
+## ПРАВИЛА ВЁРСТКИ И СТИЛЕЙ:
+1. Только JSX с захардкоженным контентом (текст, теги, ссылки на картинки, состояния кнопок).
+2. Используй ВСЕГДА бренд-токены Tailwind v4 из `@theme`:
+   - `bg-brand-purple-dark` / `text-brand-purple-dark` (#301A37)
+   - `bg-brand-purple` / `text-brand-purple` / `border-brand-purple` (#6D53AF)
+   - `bg-brand-green` / `text-brand-green` / `border-brand-green` (#9EC73D)
+   - `bg-brand-green-alt` (#A9CA5B)
+   - `bg-brand-gray` / `text-brand-gray` / `border-brand-gray` (#979797)
+   - `bg-brand-gray-light` / `border-brand-gray-light` (#E2E2E2)
+   - `bg-brand-light` / `text-brand-light` (#FAFAFA)
+3. ЗАПРЕЩЕНЫ стандартные цвета Tailwind (`purple-600`, `green-400`) и сырые HEX-коды в JSX.
+4. Кнопки верстать как `<button type="button">` без атрибутов `onClick`.
+5. Максимально точное соответствие макету/скриншоту (Pixel Perfect), включая сетку, отступы, размеры шрифтов и выравнивание элементов.
