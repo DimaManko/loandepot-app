@@ -9,10 +9,17 @@ export const api = createApi({
     getModules: builder.query({
       query: () => "/modules",
     }),
+    getModuleById: builder.query({
+      query: (id) => `/modules/${id}`,
+    }),
     getDataHeroSection: builder.query({
       query: () => "/heroSection",
     }),
   }),
 });
 
-export const { useGetModulesQuery, useGetDataHeroSectionQuery } = api;
+export const {
+  useGetModulesQuery,
+  useGetDataHeroSectionQuery,
+  useGetModuleByIdQuery,
+} = api;
