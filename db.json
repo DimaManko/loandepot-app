@@ -16,67 +16,115 @@
   "modules": [
     {
       "id": "module-1",
+      "index": 1,
       "number": "01",
       "title": "Name of the 1st module here",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-      "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
-      "link": "/modules/1"
+      "tags": ["Branding", "Marketing", "Personal"],
+      "heroMediaUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
+      "videoPrimaryUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "videoSecondaryUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "pdfUrl": "/files/module-1.pdf",
+      "pdfName": "Ebook Name",
+      "pdfDescription": "This module focuses on how to leverage your local muscle and generate leads in your local community."
     },
     {
       "id": "module-2",
+      "index": 2,
       "number": "02",
       "title": "Name of the 2nd module here",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-      "imageUrl": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
-      "link": "/modules/2"
+      "tags": ["Branding", "Marketing", "Personal"],
+      "heroMediaUrl": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
+      "videoPrimaryUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "videoSecondaryUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "pdfUrl": "/files/module-2.pdf",
+      "pdfName": "Ebook Name",
+      "pdfDescription": "This module focuses on how to leverage your local muscle and generate leads in your local community."
     },
     {
       "id": "module-3",
+      "index": 3,
       "number": "03",
       "title": "Name of the 3rd module here",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-      "imageUrl": "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80",
-      "link": "/modules/3"
+      "tags": ["Branding", "Marketing", "Personal"],
+      "heroMediaUrl": "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80",
+      "videoPrimaryUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "videoSecondaryUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "pdfUrl": "/files/module-3.pdf",
+      "pdfName": "Ebook Name",
+      "pdfDescription": "This module focuses on how to leverage your local muscle and generate leads in your local community."
     },
     {
       "id": "module-4",
+      "index": 4,
       "number": "04",
       "title": "Name of the 4th module here",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-      "imageUrl": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80",
-      "link": "/modules/4"
+      "tags": ["Branding", "Marketing", "Personal"],
+      "heroMediaUrl": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80",
+      "videoPrimaryUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "videoSecondaryUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "pdfUrl": "/files/module-4.pdf",
+      "pdfName": "Ebook Name",
+      "pdfDescription": "This module focuses on how to leverage your local muscle and generate leads in your local community."
     },
     {
       "id": "module-5",
+      "index": 5,
       "number": "05",
       "title": "Name of the 5th module here",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-      "imageUrl": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
-      "link": "/modules/5"
+      "tags": ["Branding", "Marketing", "Personal"],
+      "heroMediaUrl": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
+      "videoPrimaryUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "videoSecondaryUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "pdfUrl": "/files/module-5.pdf",
+      "pdfName": "Ebook Name",
+      "pdfDescription": "This module focuses on how to leverage your local muscle and generate leads in your local community."
     },
     {
       "id": "module-6",
+      "index": 6,
       "number": "06",
       "title": "Name of the 6th module here",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-      "imageUrl": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
-      "link": "/modules/6"
+      "tags": ["Branding", "Marketing", "Personal"],
+      "heroMediaUrl": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
+      "videoPrimaryUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "videoSecondaryUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "pdfUrl": "/files/module-6.pdf",
+      "pdfName": "Ebook Name",
+      "pdfDescription": "This module focuses on how to leverage your local muscle and generate leads in your local community."
     },
     {
       "id": "module-7",
+      "index": 7,
       "number": "07",
       "title": "Name of the 7th module here",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-      "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80",
-      "link": "/modules/7"
+      "tags": ["Branding", "Marketing", "Personal"],
+      "heroMediaUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80",
+      "videoPrimaryUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "videoSecondaryUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "pdfUrl": "/files/module-7.pdf",
+      "pdfName": "Ebook Name",
+      "pdfDescription": "This module focuses on how to leverage your local muscle and generate leads in your local community."
     },
     {
       "id": "module-8",
+      "index": 8,
       "number": "08",
       "title": "Name of the 8th module here",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-      "imageUrl": "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&q=80",
-      "link": "/modules/8"
+      "tags": ["Branding", "Marketing", "Personal"],
+      "heroMediaUrl": "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&q=80",
+      "videoPrimaryUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "videoSecondaryUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "pdfUrl": "/files/module-8.pdf",
+      "pdfName": "Ebook Name",
+      "pdfDescription": "This module focuses on how to leverage your local muscle and generate leads in your local community."
     }
   ]
 }
