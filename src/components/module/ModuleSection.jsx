@@ -1,5 +1,13 @@
 import { useParams } from "react-router-dom";
+import { Navigate } from "react-router-dom";
+
 import { useGetModuleByIdQuery } from "../../store/services/api";
+import { useGetModulesQuery } from "../../store/services/api";
+
+import Loader from "../ui/Loader";
+import ErrorMessage from "../ui/ErrorMessage";
+
+import VideoModal from "../ui/VideoModal";
 
 import { AppShell } from "../layout/AppShell";
 import { ModuleBadgeList } from "./ModuleBadgeList";
@@ -10,8 +18,51 @@ import { ModuleBottomNav } from "./ModuleBottomNav";
 export function ModuleSection() {
   const { modulesId } = useParams();
 
-  const { data: { number, title, description, imageUrl } = {} } =
-    useGetModuleByIdQuery(`module-${modulesId}`);
+  const { data: modules = [] } = useGetModulesQuery();
+
+  const {
+    data = {},
+    isError,
+    isLoading,
+    refetch,
+    error,
+  } = useGetModuleByIdQuery(`module-${modulesId}`);
+
+  if (isLoading) {
+    return <Loader fullScreen={true} />;
+  }
+
+  if (isError && error?.status === 404) {
+    return <Navigate to={"/modules/1"} />;
+  }
+
+  if (isError) {
+    return <ErrorMessage onRetry={refetch} fullScreen={true} />;
+  }
+
+  if (!data || Object.keys(data).length === 0) {
+    return (
+      <ErrorMessage
+        fullScreen={true}
+        message={`Не удалось найти модуль ${modulesId}`}
+      />
+    );
+  }
+
+  const {
+    id,
+    index,
+    number,
+    title,
+    description,
+    tags,
+    heroMediaUrl,
+    videoPrimaryUrl,
+    videoSecondaryUrl,
+    pdfUrl,
+    pdfName,
+    pdfDescription,
+  } = data;
 
   return (
     <AppShell variant="flex" sidebar={{ label: `Module #${number}`, number }}>
@@ -19,13 +70,18 @@ export function ModuleSection() {
       <section className="relative z-10 flex w-full flex-col justify-start bg-black py-12 pl-[65px] pr-[44px] pt-16 lg:w-1/2">
         {/* Фоновое изображение модуля */}
         <img
-          src={imageUrl}
+          src={heroMediaUrl}
           alt="Module background"
           className="absolute inset-0 size-full object-cover opacity-50 pointer-events-none -z-10"
         />
 
         {/* Пара видео-карточек (Show up / Evolve) + кнопка Share */}
-        <ModuleVideoPair />
+        <ModuleVideoPair
+          videoPrimaryUrl={videoPrimaryUrl}
+          videoSecondaryUrl={videoSecondaryUrl}
+          key={modulesId}
+          id={id}
+        />
       </section>
 
       {/* Правая колонка — Светлая, контент и навигация */}
@@ -51,7 +107,6 @@ export function ModuleSection() {
             <span className="size-1 rounded-full bg-brand-purple" />
           </div>
         </header>
-
         {/* Основная контентная часть */}
         <div className="flex flex-1 flex-col justify-start px-12 pb-8 lg:px-20">
           <h1 className="mb-6 text-4xl font-black tracking-tight text-black lg:text-5xl">
@@ -59,7 +114,7 @@ export function ModuleSection() {
           </h1>
 
           {/* Теги модуля */}
-          <ModuleBadgeList />
+          <ModuleBadgeList moduleTags={tags} />
 
           {/* Описание */}
           <p className="mb-6 max-w-xl text-sm font-bold leading-relaxed text-black">
@@ -87,11 +142,19 @@ export function ModuleSection() {
           </div>
 
           {/* Скачивание PDF */}
-          <PdfDownloadButton />
+          <PdfDownloadButton
+            pdfUrl={pdfUrl}
+            pdfName={pdfName}
+            pdfDescription={pdfDescription}
+          />
         </div>
-
         {/* Нижний бар навигации (прибит к низу правой колонки) */}
-        <ModuleBottomNav currentNumber={number} />
+        <ModuleBottomNav
+          currentNumber={number}
+          index={index}
+          lastModuleIndex={modules.length}
+          title={title}
+        />
       </section>
     </AppShell>
   );

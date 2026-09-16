@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
 
 const SlideCard = ({ module, index, isActive }) => {
-  const { imageUrl, title, description, link } = module;
+  const { heroMediaUrl, title, description, index: indexModule } = module;
   return (
     <article className="relative h-[227px] w-[307px] shrink-0 overflow-hidden rounded-lg shadow-xl transition-all duration-300">
-      <Link to={link}>
+      <Link to={`/modules/${indexModule}`}>
         <img
-          src={imageUrl}
+          src={heroMediaUrl}
           alt={title}
           className="absolute inset-0 size-full object-cover"
         />
 
-        <div className="absolute inset-0 bg-[#303030]/50" />
+        <div className="absolute inset-0 bg-brand-overlay/50" />
         <div className="relative z-10 flex h-full flex-col p-6 text-white">
           <div className="flex items-center justify-between">
             <span className="text-[10px] font-bold tracking-widest text-white/70">

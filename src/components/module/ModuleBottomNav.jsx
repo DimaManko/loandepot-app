@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
  * обработчиков (чистая вёрстка).
  */
 export function ModuleBottomNav({
-  currentNumber = "03",
+  currentNumber,
   index,
   lastModuleIndex,
   title,

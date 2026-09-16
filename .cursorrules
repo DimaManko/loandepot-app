@@ -19,6 +19,8 @@
   - `bg-brand-gray`, `text-brand-gray`, `border-brand-gray` (#979797)
   - `bg-brand-gray-light`, `border-brand-gray-light` (#E2E2E2)
   - `bg-brand-light`, `text-brand-light` (#FAFAFA)
+  - `bg-brand-overlay` (#303030) — photo overlay, typically `/50`
+  - `bg-brand-error`, `text-brand-error`, `border-brand-error` (#C4453A) — error states only
   - Standard pure black/white (`bg-black`, `text-white`) when explicitly needed.
 
 ## 3. Project Documentation & Specifications

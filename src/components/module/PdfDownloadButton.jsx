@@ -25,23 +25,22 @@ export function PdfDownloadButton({
         </div>
       </div>
 
-      <button
-        type="button"
-        className="border border-brand-gray-light bg-white text-black text-xs font-bold py-3 px-5 rounded-md flex items-center gap-4 hover:bg-brand-gray-light/20 transition-colors"
+      <a
+        href={pdfUrl}
+        download
+        className="border border-brand-gray-light bg-white text-black text-xs font-bold py-3 px-5 rounded-md flex items-center gap-4 no-underline hover:bg-brand-gray-light/20 transition-colors"
       >
-        <a href={pdfUrl} download>
-          <span>{label}</span>
-          <svg
-            viewBox="0 0 24 24"
-            className="size-4 text-brand-green-alt stroke-current stroke-[3] fill-none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <line x1="12" y1="5" x2="12" y2="19" />
-            <polyline points="19 12 12 19 5 12" />
-          </svg>
-        </a>
-      </button>
+        <span>{label}</span>
+        <svg
+          viewBox="0 0 24 24"
+          className="size-4 text-brand-green-alt stroke-current stroke-[3] fill-none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <line x1="12" y1="5" x2="12" y2="19" />
+          <polyline points="19 12 12 19 5 12" />
+        </svg>
+      </a>
     </div>
   );
 }

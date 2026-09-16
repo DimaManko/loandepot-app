@@ -6,11 +6,16 @@ import Loader from "../ui/Loader";
 import ErrorMessage from "../ui/ErrorMessage";
 import VideoModal from "../ui/VideoModal";
 
+import useModal from "../../hooks/useModal";
+
 import { useGetDataHeroSectionQuery } from "../../store/services/api";
-import { useState } from "react";
 
 export function HeroSection() {
-  const [isOpenVideo, setIsOpenVideo] = useState(false);
+  const {
+    isOpenModal: isVideoOpen,
+    closeModal: closeVideo,
+    openModal: openVideo,
+  } = useModal(false);
 
   const {
     data: { content, exploreControl } = {},
@@ -34,17 +39,14 @@ export function HeroSection() {
       {/* Контентная область */}
       <div className="relative flex flex-1 flex-col overflow-hidden">
         {/* Сетка Hero */}
-        <HeroContent
-          {...content}
-          onOpenVideoModal={() => setIsOpenVideo(true)}
-        />
+        <HeroContent {...content} onOpenVideoModal={openVideo} />
 
         {/* Блок со слайдами (Slider Section) - min-height 307px, 104px margin right */}
         <HeroSlider />
         <VideoModal
-          onCloseVideoModal={() => setIsOpenVideo(false)}
-          isOpen={isOpenVideo}
-          videoLink={content.videoUrl}
+          onCloseVideoModal={closeVideo}
+          isOpen={isVideoOpen}
+          videoUrl={content.videoUrl}
         />
       </div>
     </AppShell>

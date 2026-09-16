@@ -34,12 +34,12 @@ export function ErrorMessage({
       aria-live="assertive"
       className={`${containerClasses} ${className}`}
     >
-      <div className="flex w-full max-w-md flex-col items-center rounded-lg border border-red-200 bg-red-50 p-8 text-center shadow-sm">
+      <div className="flex w-full max-w-md flex-col items-center rounded-lg border border-brand-error/30 bg-brand-error/10 p-8 text-center shadow-sm">
         {/* Иконка ошибки */}
-        <div className="flex size-14 items-center justify-center rounded-full bg-red-100">
+        <div className="flex size-14 items-center justify-center rounded-full bg-brand-error/15">
           <svg
             viewBox="0 0 24 24"
-            className="size-7 text-red-500"
+            className="size-7 text-brand-error"
             fill="none"
             stroke="currentColor"
             strokeWidth="2"
@@ -59,7 +59,7 @@ export function ErrorMessage({
 
         {/* Статус ошибки, если доступен */}
         {status ? (
-          <span className="mt-2 rounded bg-red-100 px-2 py-0.5 text-xs font-bold tracking-widest text-red-600 uppercase">
+          <span className="mt-2 rounded bg-brand-error/15 px-2 py-0.5 text-xs font-bold tracking-widest text-brand-error uppercase">
             Ошибка {status}
           </span>
         ) : null}
