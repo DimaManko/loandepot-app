@@ -1,5 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
+import ReactPlayer from "react-player";
 
 /**
  * UI-компонент модального окна с видео (чистая верстка).
@@ -7,7 +8,26 @@ import { createPortal } from "react-dom";
  * Только JSX без логики: без useState/useEffect, без обработчиков кликов,
  * без пропсов. Все данные (ссылка на видео, крестик) захардкожены.
  */
-export function VideoModal({ onCloseVideoModal, isOpen, videoLink }) {
+export function VideoModal({
+  onCloseVideoModal,
+  isOpen,
+  videoUrl,
+  trackVideo = false,
+  handleProgress,
+}) {
+  const playerRef = useRef(null);
+
+  function handleTimeUpdate() {
+    if (!trackVideo || !playerRef.current) {
+      return;
+    }
+
+    const currentTime = playerRef.current.currentTime;
+    const duration = playerRef.current.duration;
+
+    const played = currentTime / duration;
+    handleProgress(played);
+  }
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "Escape") {
@@ -25,7 +45,6 @@ export function VideoModal({ onCloseVideoModal, isOpen, videoLink }) {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [isOpen, onCloseVideoModal]);
-
   return isOpen
     ? createPortal(
         // Фиксированный оверлей на весь экран с полупрозрачным тёмным фоном и размытием
@@ -43,7 +62,7 @@ export function VideoModal({ onCloseVideoModal, isOpen, videoLink }) {
               onClick={onCloseVideoModal}
               type="button"
               aria-label="Закрыть видео"
-              className="absolute top-3 right-3 z-10 flex size-10 items-center justify-center rounded-full bg-black/60 text-white transition-colors hover:bg-black/80"
+              className="absolute top-3 right-3 z-10 flex size-10 items-center justify-center rounded-full bg-black/60 text-white transition-colors hover:bg-black/80 cursor-pointer"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -59,13 +78,17 @@ export function VideoModal({ onCloseVideoModal, isOpen, videoLink }) {
             </button>
 
             {/* YouTube-видео */}
-            <iframe
-              className="absolute inset-0 size-full"
-              src={videoLink}
-              title="Видео"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+            <div className="relative aspect-video w-full max-w-4xl overflow-hidden rounded-2xl bg-black shadow-2xl">
+              <ReactPlayer
+                ref={playerRef}
+                src={videoUrl}
+                width="100%"
+                height="100%"
+                className="absolute inset-0"
+                controls={true}
+                onTimeUpdate={trackVideo ? handleTimeUpdate : undefined}
+              />
+            </div>
           </div>
         </div>,
         document.body,
