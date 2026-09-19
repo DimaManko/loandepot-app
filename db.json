@@ -1,17 +1,130 @@
 {
+  "heroSection": {
+    "content": {
+      "title": "Show Up: Evolve",
+      "subtitle": "A retail LO's guide to combating digital disruption",
+      "ctaText": "Get free access",
+      "ctaLink": "#get-access",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    },
+    "exploreControl": {
+      "title": "Explore 8 Educational Modules To Evolve Your Career",
+      "actionText": "EXPLORE ALL MODULES",
+      "link": "/modules"
+    }
+  },
   "modules": [
     {
-      "id": "1",
-      "title": "Module 1",
-      "description": "Description for module 1",
-      "status": "available"
+      "id": "module-1",
+      "index": 1,
+      "number": "01",
+      "title": "Name of the 1st module here",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "tags": ["Onboarding", "Fundamentals", "Retail"],
+      "heroMediaUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
+      "videoPrimaryUrl": "https://www.youtube.com/embed/9bZkp7q19f0",
+      "videoSecondaryUrl": "https://www.youtube.com/embed/kJQP7kiw5Fk",
+      "pdfUrl": "/files/module-1.pdf",
+      "pdfName": "Ebook Name",
+      "pdfDescription": "This module focuses on how to leverage your local muscle and generate leads in your local community."
     },
     {
-      "id": "2",
-      "title": "Module 2",
-      "description": "Description for module 2",
-      "status": "locked"
+      "id": "module-2",
+      "index": 2,
+      "number": "02",
+      "title": "Name of the 2nd module here",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "tags": ["Sales", "Negotiation", "Client Care"],
+      "heroMediaUrl": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
+      "videoPrimaryUrl": "https://www.youtube.com/embed/JGwWNGJdvx8",
+      "videoSecondaryUrl": "https://www.youtube.com/embed/RgKAFK5djSk",
+      "pdfUrl": "/files/module-2.pdf",
+      "pdfName": "Ebook Name",
+      "pdfDescription": "This module focuses on how to leverage your local muscle and generate leads in your local community."
+    },
+    {
+      "id": "module-3",
+      "index": 3,
+      "number": "03",
+      "title": "Name of the 3rd module here",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "tags": ["Digital", "Social Media", "Content"],
+      "heroMediaUrl": "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80",
+      "videoPrimaryUrl": "https://www.youtube.com/embed/OPf0YbXqDm0",
+      "videoSecondaryUrl": "https://www.youtube.com/embed/fRh_vgS2dFE",
+      "pdfUrl": "/files/module-3.pdf",
+      "pdfName": "Ebook Name",
+      "pdfDescription": "This module focuses on how to leverage your local muscle and generate leads in your local community."
+    },
+    {
+      "id": "module-4",
+      "index": 4,
+      "number": "04",
+      "title": "Name of the 4th module here",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "tags": ["Leadership", "Coaching", "Teamwork"],
+      "heroMediaUrl": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80",
+      "videoPrimaryUrl": "https://www.youtube.com/embed/CevxZvSJLk8",
+      "videoSecondaryUrl": "https://www.youtube.com/embed/hT_nvWreIhg",
+      "pdfUrl": "/files/module-4.pdf",
+      "pdfName": "Ebook Name",
+      "pdfDescription": "This module focuses on how to leverage your local muscle and generate leads in your local community."
+    },
+    {
+      "id": "module-5",
+      "index": 5,
+      "number": "05",
+      "title": "Name of the 5th module here",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "tags": ["Finance", "Mortgage", "Compliance"],
+      "heroMediaUrl": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
+      "videoPrimaryUrl": "https://www.youtube.com/embed/YQHsXMglC9A",
+      "videoSecondaryUrl": "https://www.youtube.com/embed/60ItHLz5WEA",
+      "pdfUrl": "/files/module-5.pdf",
+      "pdfName": "Ebook Name",
+      "pdfDescription": "This module focuses on how to leverage your local muscle and generate leads in your local community."
+    },
+    {
+      "id": "module-6",
+      "index": 6,
+      "number": "06",
+      "title": "Name of the 6th module here",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "tags": ["Networking", "Community", "Referrals"],
+      "heroMediaUrl": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
+      "videoPrimaryUrl": "https://www.youtube.com/embed/PT2_F-1esPk",
+      "videoSecondaryUrl": "https://www.youtube.com/embed/3JZ_D3ELwOQ",
+      "pdfUrl": "/files/module-6.pdf",
+      "pdfName": "Ebook Name",
+      "pdfDescription": "This module focuses on how to leverage your local muscle and generate leads in your local community."
+    },
+    {
+      "id": "module-7",
+      "index": 7,
+      "number": "07",
+      "title": "Name of the 7th module here",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "tags": ["Productivity", "Time Management", "Growth"],
+      "heroMediaUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80",
+      "videoPrimaryUrl": "https://www.youtube.com/embed/2Vv-BfVoq4g",
+      "videoSecondaryUrl": "https://www.youtube.com/embed/7wtfhZwyrcc",
+      "pdfUrl": "/files/module-7.pdf",
+      "pdfName": "Ebook Name",
+      "pdfDescription": "This module focuses on how to leverage your local muscle and generate leads in your local community."
+    },
+    {
+      "id": "module-8",
+      "index": 8,
+      "number": "08",
+      "title": "Name of the 8th module here",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "tags": ["Strategy", "Analytics", "Forecasting"],
+      "heroMediaUrl": "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&q=80",
+      "videoPrimaryUrl": "https://www.youtube.com/embed/lp-EO5I60KA",
+      "videoSecondaryUrl": "https://www.youtube.com/embed/e-ORhEE9VVg",
+      "pdfUrl": "/files/module-8.pdf",
+      "pdfName": "Ebook Name",
+      "pdfDescription": "This module focuses on how to leverage your local muscle and generate leads in your local community."
     }
-  ],
-  "requests": []
+  ]
 }
